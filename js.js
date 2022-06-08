@@ -130,6 +130,6 @@ inputs.forEach((e) => {
 
 button.addEventListener("click", () => {
   form();
-  window.scrollTo({ top: 1000, behavior: "smooth" });
+  window.scrollTo({ top: 2000, behavior: "smooth" });
   console.log(users);
 });
