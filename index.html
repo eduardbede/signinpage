@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page!</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 100vh;
+        width: 100%;
+      }
+      @media (max-width: 924px) {
+        body {
+          display: block;
+        }
+        .container {
+          height: 50vh;
+          display: flex;
+          flex-direction: column;
+        }
+        footer {
+          margin-bottom: 1em;
+        }
+      }
+
+      #image {
+        margin-top: 0;
+      }
+      .container {
+        flex: 2;
+        background-image: url("img/photo-background.jpg");
+        background-size: cover;
+        background-position: center center;
+      }
+      .main {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #image {
+        background-color: black;
+        opacity: 0.5;
+        margin-top: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2%;
+      }
+      img {
+        width: 25%;
+      }
+      h1 {
+        color: aliceblue;
+      }
+      .para {
+        padding-left: 20px;
+        padding-right: 20%;
+      }
+      .formInput {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+        padding: 2% 0 5% 0;
+        background-color: rgb(238, 237, 237);
+        padding-left: 20px;
+        border-radius: 12px;
+        box-shadow: 14px 7px 20px black;
+      }
+      h2 {
+        margin-bottom: 0px;
+      }
+      input {
+        width: 100%;
+        border-radius: 5px;
+        width: 20rem;
+        height: 20px;
+      }
+      .dada {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .paraLabel {
+        margin-bottom: 0px;
+        font-size: larger;
+        font-weight: bold;
+      }
+      .buttons {
+        margin-top: 20px;
+        padding-left: 20px;
+      }
+      .para {
+        font-size: 2em;
+      }
+      button {
+        border-radius: 5px;
+        width: 150px;
+        height: 50px;
+        background-color: green;
+        font-weight: bold;
+      }
+      button:active {
+        background-color: #ce1212;
+        transform: translateY(4px);
+      }
+      .afisare {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      #buttonCenter {
+        display: flex;
+        justify-content: center;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      footer {
+        margin-top: 2em;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-family: "Playfair Display", serif;
+        font-family: "Sora", sans-serif;
+        font-size: 21px;
+        letter-spacing: 0.6px;
+        word-spacing: 0.8px;
+        color: #000000;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: italic;
+        font-variant: small-caps;
+      }
+
+      #an {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="image">
+        <img src="img/odin-logo.png" />
+        <h1>ODIN</h1>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="para">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up now
+          to get started
+        </p>
+        <p>You know you want to.</p>
+      </div>
+      <div class="formInput">
+        <h2>Let`s do this!</h2>
+        <div class="afisare">
+          <div id="confirmMessage"></div>
+        </div>
+        <div class="dada">
+          <div>
+            <p class="paraLabel"><label for="firstName">First Name</label></p>
+            <input id="firstName" class="inputValue" type="text" value="" />
+            <div id="noFirstName"></div>
+          </div>
+          <div>
+            <p class="paraLabel"><label for="lastName">Last Name</label></p>
+            <input id="lastName" class="inputValue" type="text" value="" />
+            <div id="noLastName"></div>
+          </div>
+        </div>
+        <div class="dada">
+          <div>
+            <p class="paraLabel"><label for="email">Email</label></p>
+            <input id="email" class="inputValue" type="email" value="" />
+            <div id="noEmail"></div>
+          </div>
+          <div>
+            <p class="paraLabel">
+              <label for="phoneNumber">Phone Number</label>
+            </p>
+            <input id="phoneNumber" class="inputValue" type="tel" value="" />
+            <div id="noPhoneNumber"></div>
+          </div>
+        </div>
+        <div class="dada">
+          <div>
+            <p class="paraLabel"><label for="password">Password</label></p>
+            <input id="password" class="inputValue" type="password" placeholder="Minimum 5 characters" value="" />
+            <div id="eroare"></div>
+          </div>
+          <div>
+            <p class="paraLabel">
+              <label for="repeatPassword">Repeat Password</label>
+            </p>
+            <input
+              id="repeatPassword"
+              class="inputValue"
+              type="password"
+              placeholder="Minimum 5 characters"
+              value=""
+            />
+            <div id="noRepeatPassword"></div>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <div id="buttonCenter"><button id="button">Create Account</button></div>
+        <h2>Already have an account? <a href="#">Log In!</a></h2>
+      </div>
+      <footer>
+        <div id="an">@eduardbede</div>
+        <a href="https://github.com/eduardbede">Visit GitHub</a>
+      </footer>
+    </div>
+
+    <script src="js.js"></script>
+  </body>
+</html>
