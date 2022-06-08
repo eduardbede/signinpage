@@ -90,7 +90,7 @@ const form = () => {
     repeatPassword.value = "";
   } else {
     users.push(users1);
-    message.textContent = "Your Account Has Been Created! You can Log In now!";
+    message.textContent = "Your Account Has Been Created!";
     message.style.color = "green";
     inputs.forEach((e) => (e.value = ""));
   }
