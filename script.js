@@ -28,9 +28,13 @@ function verifyEmailAndPass(){
         if(verify[verify.findIndex(el => el.email === email.value)].password === password.value){
             confirmMessage.textContent = "Log In Succeseful!";
             confirmMessage.style.color = "green";
+        }else if(verify[verify.findIndex(el => el.email === email.value)].password !== password.value){
+            confirmMessage.textContent = "Password not match!";
+            confirmMessage.style.color = "red"
         }else if(verify.findIndex(el => el.password === password.value) === -1){
             confirmMessage.textContent = "Password not match!";
             confirmMessage.style.color = "red"
+            console.log("da")
         }
      }
         else if(verify.findIndex(el => el.email === email.value) === -1 ){
