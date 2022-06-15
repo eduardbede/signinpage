@@ -5,7 +5,11 @@ const date = new Date();
 let year = date.getFullYear();
 const an = (document.getElementById("an").textContent = year + " @eduardbede ");
 
-const users = [];
+let users = JSON.parse(localStorage.getItem('userData'));
+
+if(users === null){
+  users = [];
+}
 
 const form = () => {
   let users1 = {
@@ -65,15 +69,12 @@ const form = () => {
         e.style.borderColor = "red";
       }
     });
-  } else if (!users1.email.includes("@")) {
-    noEmail.textContent = "Email dose not contain @";
+  } else if (!users1.email.includes("@gmail.com", "@yahoo.com", "hotmail.com", "aol.com")) {
+    noEmail.textContent = "Incorect format of email adress";
     noEmail.style.color = "red";
     email.style.borderColor = "red";
   } else if (
-    users.findIndex(
-      (users) => users.email === document.getElementById("email").value
-    ) !== -1
-  ) {
+    users.findIndex((el) => el.email === document.getElementById("email").value) !== -1) {
     noEmail.textContent = "This email exist!";
     noEmail.style.color = "red";
     email.style.borderColor = "red";
@@ -90,6 +91,7 @@ const form = () => {
     repeatPassword.value = "";
   } else {
     users.push(users1);
+    localStorage.setItem('userData', JSON.stringify(users));
     message.textContent = "Your Account Has Been Created!";
     message.style.color = "green";
     inputs.forEach((e) => (e.value = ""));
@@ -133,3 +135,4 @@ button.addEventListener("click", () => {
   window.scrollTo({ top: 2000, behavior: "smooth" });
   console.log(users);
 });
+

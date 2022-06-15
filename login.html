@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up Page!</title>
+    <title>Log In Page!</title>
 
     <style>
       body {
@@ -87,6 +87,8 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+        flex-direction: column;
+        align-items: center;
       }
       .paraLabel {
         margin-bottom: 0px;
@@ -169,54 +171,20 @@
         </div>
         <div class="dada">
           <div>
-            <p class="paraLabel"><label for="firstName">First Name</label></p>
-            <input id="firstName" class="inputValue" type="text" value="" />
-            <div id="noFirstName"></div>
-          </div>
-          <div>
-            <p class="paraLabel"><label for="lastName">Last Name</label></p>
-            <input id="lastName" class="inputValue" type="text" value="" />
-            <div id="noLastName"></div>
-          </div>
-        </div>
-        <div class="dada">
-          <div>
             <p class="paraLabel"><label for="email">Email</label></p>
-            <input id="email" class="inputValue" type="email" value="" />
-            <div id="noEmail"></div>
+            <input id="email" class="inputValue" type="text" value="" />
+            <div id="noEmail" class="messageDiv"></div>
           </div>
-          <div>
-            <p class="paraLabel">
-              <label for="phoneNumber">Phone Number</label>
-            </p>
-            <input id="phoneNumber" class="inputValue" type="tel" value="" />
-            <div id="noPhoneNumber"></div>
-          </div>
-        </div>
-        <div class="dada">
           <div>
             <p class="paraLabel"><label for="password">Password</label></p>
-            <input id="password" class="inputValue" type="password" placeholder="Minimum 5 characters" value="" />
-            <div id="eroare"></div>
-          </div>
-          <div>
-            <p class="paraLabel">
-              <label for="repeatPassword">Repeat Password</label>
-            </p>
-            <input
-              id="repeatPassword"
-              class="inputValue"
-              type="password"
-              placeholder="Minimum 5 characters"
-              value=""
-            />
-            <div id="noRepeatPassword"></div>
+            <input id="password" class="inputValue" type="password" value="" />
+            <div id="noPassword" class="messageDiv"></div>
           </div>
         </div>
       </form>
       <div class="buttons">
-        <div id="buttonCenter"><button id="button">Create Account</button></div>
-        <h2>Already have an account? <a href="login.html">Log In!</a></h2>
+        <div id="buttonCenter"><button id="button">Log In</button></div>
+        <h2>Want to create an account? <a href="index.html">Click me!</a></h2>
       </div>
       <footer>
         <div id="an">@eduardbede</div>
@@ -224,6 +192,6 @@
       </footer>
     </div>
 
-    <script src="js.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
